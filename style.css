@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
   }
+
   body {
     display: flex;
     align-items: center;
@@ -9,6 +10,7 @@
     height: 100vh;
     background: #161616;
   }
+  
   .menu {
     position: relative;
     width: 260px;
@@ -17,6 +19,7 @@
     align-items: center;
     justify-content: center;
   }
+  
   .menu li {
     position: absolute;
     left: 0;
@@ -26,9 +29,11 @@
     transition: 0.5s;
     transition-delay: calc(0.1s * var(--i));
   }
+  
   .menu.active li {
     transform: rotate(calc(360deg / 8 * var(--i)));
   }
+  
   .menu a {
     display: flex;
     align-items: center;
@@ -44,9 +49,11 @@
     transition-delay: 0.5s;
     filter: drop-shadow(0 0 2px var(--clr));
   }
+  
   .menu.active a {
     color: var(--clr);
   }
+  
   .menu a::before {
     content: "";
     position: absolute;
@@ -58,6 +65,7 @@
     transition: width 0.5s, height 0.5s, transform 0.5s;
     transition-delay: 0.5s, 1s, 1.5s;
   }
+  
   .menu.active a::before {
     width: 50px;
     height: 50px;
@@ -70,9 +78,11 @@
     filter: drop-shadow(0 0 5px var(--clr));
     rotate: 135deg;
   }
+
   .menu.active li:hover a::before {
     background: var(--clr);
   }
+  
   .menu.active li:hover a ion-icon {
     color: #161616;
   }
@@ -91,6 +101,7 @@
     font-size: 32px;
     transition: 1.5s;
   }
+
   .menu.active .menuToggle {
     transform: rotate(315deg);
   }
